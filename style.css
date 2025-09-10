@@ -1,104 +1,185 @@
-    * {
-        padding: 0;
-        margin: 0;
-        box-sizing: border-box;
-    }
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+  background-color: #fff6e8;
+}
 
-    svg {
-        height: 50px;
-    }
+header{
+    background-color: #FFD188;
+    height: 100px;
+}
 
-    header {
-        background-color: #ffd188;
-        height: 100px;
-    }
+.container_cabecalho{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    max-width: 1440px;
+    /* background-color: aquamarine; */
+    margin: 0 auto;
+    height: 100%;
+    align-items: center;
+}
 
-    .container_cabecalho {
-        display: flex;
-        justify-content: space-between;
-        width: 90%;
-        max-width: 1440px;
-        background-color: #ffd188;
-        margin: 0 auto;
-        height: 100%;
-        align-items: center;
+.icone_home{
+    height: 50px;
+}
 
-    }
+.box_busca{
+    position: relative;
+    width: 60%;
+    max-width: 500px;
+    margin: 0 10px;
+}
 
-    .icone_home {
-        height: 50px;
-    }
+.icone_lupa{
+    height: 24px;
+    position: absolute;
+    left: 9px;
+    top: 9px;
+    fill: #b0b0b0;
+}
 
-    .box_busca {
-        position: relative;
-        width: 60%;
-        max-width: 500px;
-        margin: 0 10px;
-    }
+.logo{
+    height: 60px;
+}
 
-    .icone_lupa {
-        height: 24px;
-        position: absolute;
-        left: 9px;
-        top: 9;
-        fill: b0b0b0;
-    }
+.campo_busca{
+    width: 100%;
+    height: 42px;
+    border-radius: 10px;
+    border: solid 1px #cccccc;
+    padding-left: 2.5rem;
+    font-family: "Bellota", system-ui;
+    font-size: 1rem;
+}
 
-    .logo {
-        height: 60px;
-    }
+.banner{
+  background-image: url(./assets/imgs/banner.png);
+  width: 100%;
+  aspect-ratio: 3.2;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
-    .campo_busca {
-        width: 100%;
-        height: 32px;
-        border-radius: 10px;
-        border: solid 1px #cccccc;
-        padding-left: 2.5rem;
-        font-family: "Bellota", system-ui;
-        font-size: 1rem;
-    }
-    
-    .banner{
-        background-image: url(./assets/imgs/banner.png);
-        width: 100%;
-        aspect-ratio: 3.2;
-        background-repeat: no-repeat;
-        background-size: contain;
-    }
+.container{
+  width: 90%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.titulo{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 100px 0;
+  /* background-color: blueviolet; */
+}
+
+.titulo span{
+  font-size: 48px;
+  
+}
+
+.titulo hr{
+  width: 300px;
+  height: 4px;
+  border: none;
+  border-radius: 2px;
+  background-color: #FFD188;
+}
+
+.acessivel{
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
 
 
-        .container{
-            width: 90%;
-            max-width: 1440px;
-            margin: 0 auto;
-        }
 
-        .titulo{
-            display: flex;
-            background-color: chartreuse;
-        }
-        
 
-    .titulo span{
-        font-size: 48px;
-        
-        
-    }
 
-    .titulo hr{
-        width: 300px;
-        height: 4px;
-        border: none;
-        border-radius: 2px;
-        background-color: crimson;
-    }
+/* CARDS*/
+.cards{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10%;
+  justify-content: center;
+}
 
-    .acessivel{
-        position: absolute;
-        width: 1px;
-        height: 1px;
-        overflow: hidden;
-        clip-path: inset(50%);
-        white-space: ;
-    }
-    
+
+.card{
+  width: 350px;
+  height: 500px;
+  background-color: #ffffff;
+  border-radius: 30px;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 10px;
+  align-items:center;
+  display: flex;
+  margin-bottom: 100px;
+  box-shadow: 0 4px 4px 2px #00000025;
+}
+
+.card img{
+  width: 100%;
+
+}
+
+.card p,
+.card.span{
+  font-size: 18px;
+  width: 90%;
+}
+
+  .whatsapp{
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    transition: transform 0.5s ease-in-out,
+    filter 0.5s;
+
+  }
+
+.whatsapp img{
+  width: 80px;
+  filter: drop-shadow(0 5px 1px #00000025);
+}
+
+.whatsapp:hover{
+  transform: scale(1.5);
+  filter: drop-shadow(0 10px 2px #00000025);
+}
+
+footer{
+  height: 50px;
+  width: 100%;
+  background-color: #FFD188;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+footer p{
+  font-family: "Julius Sans One", sans-serif;
+  text-align: center;
+
+}
+/*media*/
+@media screen and (max-width:600px){
+  .banner{
+    aspect-ratio: 2.0;
+  }
+  
+
+  
+}
