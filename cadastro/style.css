@@ -5,12 +5,18 @@
     font-family: "Bellota", system-ui;
 }
 
+:root {
+    --corPrincipal: #FFd188;
+    --arredondameno:10px;
+    --tranparente:0 4px 4px 2px #00000025;
+}
+
 body {
     background-color: #fff6e8;
 }
 
 header {
-    background-color: #FFD188;
+    background-color: var(--corPrincipal);
     height: 100px;
 }
 
@@ -70,24 +76,34 @@ header {
     white-space: nowrap;
 }
 
+
+/*cadastro*/
 .container_cadastro {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+.container_lista h2,
 .container_cadastro h2 {
     font-size: 48px;
     margin-top: 100px;
 
 }
 
+.container_lista {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container_lista hr,
 .container_cadastro hr {
     width: 300px;
     height: 4px;
     border: none;
     border-radius: 2px;
-    background-color: #FFD188;
+    background-color: var(--corPrincipal);
     margin-bottom: 100px;
 }
 
@@ -167,7 +183,7 @@ header {
     font-size: 26px;
     margin: 50px 0;
     border-radius: 10px;
-    background-color: #FFD188;
+    background-color: var(--corPrincipal);
     border: none;
     padding: 10px 200px;
     box-shadow: 0 4px 4px 2px #00000025;
@@ -207,18 +223,116 @@ input[type="file"] {
     width: 40%;
 }
 
+
+
+
+
+
+
+/*LISTA*/
+
+table {
+    width: 90%;
+    max-width: 1200px;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+th {
+    border-bottom: solid 2px --corPrincipal;
+    padding: 0 3px 5px 3px;
+    font-size: 18px;
+}
+
+td {
+    padding: 10px 3px 5px 3px;
+    border-bottom: solid #b3b3b3;
+}
+
+table svg {
+    width: 30px;
+    cursor: pointer;
+}
+
+/* rodape */
+footer{
+  height: 50px;
+  width: 100%;
+  background-color: #FFD188;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+
 /*media*/
-@media screen and (max-width: 768px) {
-    .box_cadastro {
-        flex-direction: column;
-    }
-
-    .cadastro_coluna1,
-    .cadastro_coluna2 {
-        width: 100%;
-    }
-
-    .container_cadastro input[type="button"] {
-        padding: 10px 100px;
+@media screen and (max-width: 1000px) {
+    table {
+        width: 96%;
     }
 }
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 768px) {
+        
+        .box_cadastro {
+            flex-direction: column;
+        }
+
+        .cadastro_coluna1,
+        .cadastro_coluna2 {
+            width: 100%;
+        }
+
+
+
+        .container_cadastro input[type="button"] {
+            padding: 10px 100px;
+        }
+    }
+
+
+    /*LISTA*/
+
+    table {
+        text-align: left;
+        max-width: 460px;
+
+    }
+
+    thead {
+        display: none;
+    }
+
+    tr {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 30px;
+        background-color: #ffffff;
+        border-radius: var(--arredondameno);
+        border: solid 1px var(--corPrincipal);
+        box-shadow: 0 4px 4px 2px #00000025;
+    }
+
+    td{
+        border-bottom: none;
+    }
+
+
+    td::before {
+        content: attr(data-cell);
+        font-weight: 600;
+
+    }
+
+    td:last-child {
+     align-self: flex-end;
+     
+    }
