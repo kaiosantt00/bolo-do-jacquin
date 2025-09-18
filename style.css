@@ -184,3 +184,8 @@ footer p{
 
   
 }
+
+.card_cerionia{
+  background: #0077FF;
+background: linear-gradient(0deg, rgba(0, 119, 255, 1) 0%, rgba(142, 195, 255, 1) 50%);
+}
